@@ -486,7 +486,7 @@ with tab2: # 감정분석 통계
 
     with t2_col1_2:
         st.subheader('기준일 선택')
-        default_date = min(max(datetime.date(2023, 6, 25), t1_min_datetime), t1_max_datetime)
+        default_date = min(max(datetime.date(2023, 6, 25), t1_min_datetime.date()), t1_max_datetime.date())
         tab2_targetdate = pd.to_datetime(st.date_input('대상 날짜 선택', value=default_date, min_value=t1_min_datetime, max_value=t1_max_datetime, key='tab2_대상날짜선택', label_visibility="collapsed"))
         # tab2_targetdate = time.mktime(tab2_targetdate.timetuple())
         # st.text(type(tab2_targetdate))
