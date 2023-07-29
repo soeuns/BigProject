@@ -1,7 +1,7 @@
 
 # 라이브러리 불러오기
 import streamlit as st
-from streamlit_folium import st_folium
+#from streamlit_folium import st_folium
 import pandas as pd
 from keras.models import load_model
 import os, glob
