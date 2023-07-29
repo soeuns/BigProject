@@ -37,7 +37,7 @@ Lone_Person_Dataset['연령대'] = np.select(conditions, values, default='80대'
 font_name = font_manager.FontProperties(fname='./Data/Font/NanumGothic.otf').get_name()
 columns_gap = 'large'
 
-########################### ARIMA 모델 함수 ########################################### 박소은 작성 => 이강욱 수정 및 통합
+########################### ARIMA 모델 함수 ###########################################
 def Lone_Person_Dataset_Loader(group_name, region_name, gender_name, age_name):
     
     df = Lone_Person_Dataset
@@ -118,7 +118,7 @@ def Lone_Person_Dataset_Loader(group_name, region_name, gender_name, age_name):
     st.pyplot(fig)
 
     
-########################### 예측값 출력 함수 ########################################### 박소은 작성 => 이강욱 수정 및 통합
+########################### 예측값 출력 함수 ###########################################
 def pred(group_name, region_name, gender_name, age_name):
 #     df = pd.read_csv('./Data/Lone_Person_Data/group_n.csv')
     df = Lone_Person_Dataset
@@ -171,7 +171,7 @@ def pred(group_name, region_name, gender_name, age_name):
 
 
     
-########################### 파이차트(현재) 함수 ########################################### 박소은 작성 => 이강욱 수정 및 통합
+########################### 파이차트(현재) 함수 ###########################################
 def piechart(region, gender, age):
 #     df = pd.read_csv('./Data/Lone_Person_Data/group_n.csv')
     df = Lone_Person_Dataset
@@ -225,7 +225,7 @@ def piechart(region, gender, age):
 
 
 
-########################### 파이차트(미래) 함수 ########################################### 박소은 작성 => 이강욱 수정 및 통합
+########################### 파이차트(미래) 함수 ###########################################
 def piechart_pred(region, gender, age):
 #     df = pd.read_csv('./Data/Lone_Person_Data/group_n.csv')
     df = Lone_Person_Dataset
@@ -306,7 +306,7 @@ def piechart_pred(region, gender, age):
     return fig
 
 
-########################### IoT 추가 함수 ########################################### 이강욱 작성 및 수정
+########################### IoT 추가 함수 ###########################################
 def IoT_add_set_Dataset(Temp_Dataset):
     Original_Temp_Dataset = Temp_Dataset
     Temp_Dataset['등록일시'] = pd.to_datetime(Temp_Dataset['등록일시']).dt.date 
@@ -320,7 +320,7 @@ def IoT_add_set_Dataset(Temp_Dataset):
     return Original_Temp_Dataset, Temp_Dataset, Target_Type, Current_Status
 
 
-########################### IoT 위험 감지 함수 ########################################### 이강욱 작성 및 수정
+########################### IoT 위험 감지 함수 ###########################################
 def IoT_Emergency_Detect_Function(t1_Target_Alert_Time, Temp_Dataset):
     
     # st.table(Temp_Dataset.head(10))
@@ -349,7 +349,7 @@ def IoT_Emergency_Detect_Function(t1_Target_Alert_Time, Temp_Dataset):
     
     
 
-########################### 디자인 등 사전 작성 ######################################### 박소은, 이강욱 작성 및 수정
+########################### 디자인 등 사전 작성 #########################################
 
     # 버튼 스타일 변경 => 버튼 불필요로 적용된 코드 주석처리됨
     
@@ -366,7 +366,7 @@ button_style = """
     """
 
 
-########################### 페이지 코드 함수 ########################################### 이강욱 작성 및 수정
+########################### 페이지 코드 함수 ###########################################
 
 st.set_page_config(layout="wide")
 
